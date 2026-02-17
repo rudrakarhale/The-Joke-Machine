@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Very Funny Jokes Machine 🎭</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <div class="header-left">
+                <h1>Comedy AI <span class="badge">BETA</span></h1>
+                <p class="subtitle">Trained on actual humor, not dad jokes.</p>
+            </div>
+            <button id="theme-toggle" class="icon-btn" aria-label="Toggle Dark Mode">
+                <i class="fas fa-moon"></i>
+            </button>
+        </header>
+
+        <div class="controls">
+            <label for="category-select">Select a Vibe:</label>
+            <select id="category-select">
+                <option value="any">🎲 Surprise Me (Any)</option>
+                <option value="programming">💻 Programming</option>
+                <option value="tech">📱 Tech Life</option>
+                <option value="ai">🤖 AI & Robots</option>
+                <option value="school">🎒 School & College</option>
+                <option value="absurd">🦄 Super Random Absurdity</option>
+                <option value="roast">🔥 Roast Me (Lightweight)</option>
+            </select>
+        </div>
+
+        <main class="joke-card">
+            <div class="card-header">
+                <span id="joke-category" class="category-tag">Welcome</span>
+                <button id="copy-btn" class="icon-btn small" aria-label="Copy Joke" title="Copy to clipboard">
+                    <i class="far fa-copy"></i>
+                </button>
+            </div>
+            <div class="joke-content">
+                <p id="joke-text">Click the button below to initialize the humor protocol. Brace yourself.</p>
+            </div>
+            
+            <div class="reaction-bar" id="reaction-bar" style="display: none;">
+                <span class="rate-text">Rate this:</span>
+                <button class="reaction-btn" data-reaction="laugh">😂</button>
+                <button class="reaction-btn" data-reaction="smile">😏</button>
+                <button class="reaction-btn" data-reaction="groan">🤦‍♂️</button>
+            </div>
+        </main>
+
+        <div class="action-area">
+            <button id="generate-btn" class="primary-btn">
+                <i class="fas fa-bolt"></i> Make Me Laugh
+            </button>
+            <p class="counter-text">Jokes generated today: <span id="joke-counter">0</span></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
